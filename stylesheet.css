@@ -1,0 +1,244 @@
+@font-face {
+    font-family: Young Serif;
+    src: url(/assets/fonts/young-serif/YoungSerif-Regular.ttf);
+}
+
+@font-face {
+    font-family: Outfit;
+    src: url(/assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+}
+
+:root {
+    /*primary colors*/
+    --nutmeg: hsl(14, 45%, 36%);
+    --dark-raspberry: hsl(332, 51%, 32%);
+
+    /*neutral colors*/
+    --white: hsl(0, 0%, 100%);
+    --rose-white: hsl(330, 100%, 98%);
+    --eggshell: hsl(30, 54%, 90%);
+    --light-grey: hsl(30, 18%, 87%);
+    --wenge-brown: hsl(30, 10%, 34%);
+    --dark-charcoal: hsl(24, 5%, 18%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--eggshell);
+    max-width: 1440px;
+    height: fit-content;
+    font-size: 16px;
+    font-family: Outfit;
+}
+
+p, ul, ol {
+    font-weight: 400;
+    color: var(--wenge-brown);
+    font-family: Outfit;
+}
+
+b {
+    font-weight: 00;
+}
+
+li::marker {
+    color: var(--nutmeg);
+}
+
+.card-container {
+    width: 730px;
+    background-color: var(--white);
+    margin: 50px auto;
+    border-radius: 1.2rem;
+    padding: 2.5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.introduction h1 {
+    font-family: Young Serif;
+    font-weight: 400;
+    font-size: 2.5rem;
+    color: var(--dark-charcoal);
+    margin-bottom: 1rem;
+}
+
+.introduction p {
+    line-height: 1.5rem;
+    color: var(--wenge-brown);
+    margin-bottom: 2rem;
+}
+
+.preparation-time-info {
+    background-color: var(--rose-white);
+    color: var(--dark-raspberry);
+    padding: 1.5rem 1.8rem;
+    border-radius: 10px;
+    margin-bottom: 1.6em;
+}
+
+
+.preparation-time-info ul {
+    margin: 10px 0 0 1.8rem;
+    color: var(--wenge-brown);
+    line-height: 2rem;
+}
+
+.preparation-time-info ul li {
+    padding-left: 10px;
+}
+
+.preparation-time-info ul li::marker {
+    color: var(--dark-raspberry);
+}
+
+.ingredients h2, 
+.instructions h2, 
+.nutrition h2 {
+    font-family: Young serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--nutmeg);
+    margin-bottom: 1rem;
+}
+
+.ingredients ul {
+    margin: 1rem 0 0 1.5rem;
+    color: var(--wenge-brown);
+}
+
+.ingredients ul li {
+    padding-left: 1rem;
+    line-height: 2rem;
+}
+
+.ingredients,
+.instructions {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--light-grey);
+    margin-bottom: 1.7rem;
+}
+
+.instructions ol {
+    margin-left: 1.5rem;
+    color: var(--wenge-brown);
+}
+
+.instructions ol li {
+    padding-left: 10px;
+    margin-bottom: 5px;
+    line-height: 1.6rem;
+    width: 620px;
+    font-weight: 700;
+}
+
+.instructions span {
+    font-weight: 400;
+}
+
+.nutrition-info {
+    margin-top: 1rem;
+}
+
+.nutrition .nutrient-row {
+    padding: 13px;
+    border-bottom: 1px solid var(--light-grey);
+}
+
+.nutrition .nutrient-row:last-of-type {
+    border: none;
+}
+
+.nutrient-row {
+    display: flex;  
+}
+
+.nutrition .nutrient-value {
+    font-weight: 700;
+    color: var(--nutmeg);
+    align-self: center;
+}
+
+.nutrient {
+    width: 325px;
+}
+
+.nutrient-value {
+    font-weight: 700;
+    color: var(--nutmeg);
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    font-style: italic;
+}
+.attribution a { 
+    color: black; 
+    text-decoration: underline;
+}
+
+
+@media (max-width: 375px) {
+    body {
+        max-width: 375px;
+    }
+    
+    .card-container {
+        margin: 0 auto;
+        width: min-content;
+        padding: 0 2.5rem 1.8rem 2.5rem;
+        border-radius: 0 0 1.2rem 1.2rem;
+        margin-bottom: 1rem;
+        position: relative;
+    }
+    
+    .card-items {
+        width: 315px;
+    }
+
+    img {
+        width: 100%;
+        height: 180px;
+        border-radius: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        
+    }
+
+    .introduction h1 {
+        width: 400px;
+        font-size: 2.3rem;
+        line-height: 1;
+        margin-top: 210px;
+        margin-bottom: 1.3rem;
+    }
+
+    .instructions ol li {
+        width: 280px;
+    }
+
+    .nutrition {
+        width: 300px;
+    }
+
+    .nutrient {
+        width: 150px;
+    }
+}   
