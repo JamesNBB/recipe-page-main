@@ -95,6 +95,9 @@ img {
     margin-bottom: 1.6em;
 }
 
+.preparation-time-info h2 {
+    font-size: 1.2rem;
+}
 
 .preparation-time-info ul {
     margin: 10px 0 0 1.8rem;
